@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/login.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Crave_Login</title>
+	</head>
+	<body>
+		<nav>
+			<img src="/images/logo.png" alt="logo" />
+			<div class="nav__links">
+				<a href="#">About Us</a>
+				<a href="#">Contact Us</a>
+				<a href="./signup" class="btn">Sign Up</a>
+				<a href="./login" class="btn">Log In</a>
+			</div>
+			
+            <div id="mobile_menu">
+				<a href="#">About Us</a>
+				<a href="#">Contact Us</a>
+				<a href="./signup" class="btn">Sign Up</a>
+				<a href="./login" class="btn">Log In</a>
+			</div>
+			<div class="menu"><i class="fa-solid fa-bars"></i></div>
+		</nav>
+		<main>
+			<div class="create_account">
+				<h1>Welcome</h1>
+				<p>We are glad to have you!</p>
+				<form action="/user/login" method="POST">
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Email Address"
+						required
+						autocomplete="email"
+					/>
+					<input
+						type="password"
+						name="password"
+						id="password"
+						placeholder="Password"
+						required
+					/>
+					<button type="submit">Login</button>
+
+					<p>Forgot Password?</p>
+					<p>
+						Don’t have an account?
+						<a href="./signup">Sign Up</a>
+					</p>
+				</form>
+			</div>
+			<div class="bgImg"></div>
+		</main>
+		<script src="/js/login.js"></script>
+	</body>
+</html>

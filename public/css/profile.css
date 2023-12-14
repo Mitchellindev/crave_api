@@ -1,0 +1,180 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Sintony", sans-serif;
+}
+
+:root {
+	--green: #218c0f;
+	--white: #ffffff;
+	--black: #000000;
+	--orange: #f00;
+	--box_shadow: rgba(0, 0, 0, 0.12);
+}
+
+nav,
+.nav__links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 3rem;
+}
+.nav__links {
+	width: 35rem;
+}
+
+.nav__links a {
+	text-decoration: none;
+	color: var(--black);
+	font-family: Sintony;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 28px;
+}
+.nav__links > .btn {
+	padding: 0.3rem 2rem;
+	background-color: var(--green);
+	color: var(--white);
+	border-radius: 4rem;
+	font-weight: 400;
+}
+.menu {
+	z-index: 100;
+	font-size: 1rem;
+	display: none;
+}
+#mobile_menu a {
+	display: block;
+	padding-block: 0.4rem;
+	text-decoration: none;
+	color: var(--black);
+	font-family: Sintony;
+	font-size: 1rem;
+	width: 100%;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 28px;
+	border-bottom: 1px solid var(--black);
+	margin-bottom: 0.5rem;
+}
+#mobile_menu .btn {
+	border-bottom: none;
+	display: inline !important;
+	text-align: center;
+	padding: 0.3rem 2rem;
+	background-color: var(--green);
+	color: var(--white);
+	border-radius: 4rem;
+	font-weight: 400;
+	margin-bottom: 0.6rem;
+}
+#mobile_menu {
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 1rem;
+	padding-inline: 1.5rem;
+	position: absolute;
+	right: -50%;
+	top: 2.5rem;
+	background-color: var(--white);
+	box-shadow: var(--box_shadow);
+	color: var(--black);
+	z-index: 50;
+	transition: 0.6s ease-in-out;
+	display: none;
+}
+main {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+main .bgImg {
+	width: 50%;
+	height: 100vh;
+	background-image: url("/images/food.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.create_account {
+	width: 50%;
+	padding-left: 3rem;
+	text-align: start;
+}
+.create_account h1 {
+	font-size: 2.6rem;
+	margin-bottom: 0.3rem;
+}
+.create_account > p {
+	margin-bottom: 1.5rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+form > div:nth-child(2) > input,
+form > div:nth-child(3) > input,
+form > div:nth-child(4) > input,
+form > div:nth-child(5) > input,
+form > div:nth-child(6) > select,
+form > div:nth-child(7) > select,
+form > div:nth-child(8) > select {
+	padding-block: 0.5rem;
+	padding-inline: 1rem;
+	border-radius: 1.2rem;
+	border: 1px solid var(--green);
+	line-height: 1.2rem;
+	letter-spacing: 0.1rem;
+	margin-top: 0.3rem;
+}
+form > div > button {
+	width: 10rem;
+	margin-right: 0;
+	background-color: var(--green);
+	color: var(--white);
+	border: none;
+	padding: 0.5rem;
+	border-radius: 3rem;
+	cursor: pointer;
+	margin-block: 1rem;
+	box-shadow: 0px 6px 30px 5px var(--box_shadow);
+}
+
+@media (max-width: 769px) {
+	nav {
+		padding-inline: 1.3rem;
+	}
+	.nav__links {
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+	#mobile_menu {
+		display: none;
+	}
+	.create_account h1 {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 425px) {
+	.bgImg {
+		display: none;
+	}
+	.create_account {
+		width: 100%;
+		padding-inline: 1rem;
+		padding-block: 0.8rem;
+	}
+	form > button {
+		width: 10rem;
+	}
+}
